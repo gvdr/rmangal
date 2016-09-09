@@ -38,7 +38,7 @@ filter:
 ```{r spFilter}
 heteractis <- list(field='name', relation='startswith', target='Heteractis')
 heteractis_filter <- makefilter(api, 'taxa', heteractis)
-Heteractis_species <- listTaxa(api, 'taxa', heteractis_filter)
+Heteractis_species <- listTaxa(api, heteractis_filter)
 laply(Heteractis_species, function(x) x$name)
 ```
 
